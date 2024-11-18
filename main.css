@@ -1,0 +1,87 @@
+body {
+  /* 要素を画面中央に */
+  display: flex;
+  /* 水平方向に中央揃え */
+  justify-content: center;
+  /* 垂直方向に中央揃え */
+  align-items: center;
+  /* vh : ビューポートの高さに対する割合 */
+  height: 100vh;
+  /* デフォルトのマージンを削除してページ全体が中央に配置されるように */
+  margin: 0;
+  /* フォント第一優先、第二優先 */
+  font-family: Arial, sans-serif;
+  /* ページ全体の背景色を濃いグレーに */
+  background-color: #222;
+}
+
+.calculator {
+  /* 電卓の内部要素を縦に */
+  display: flex;
+  /* 列に要素を並べる */
+  flex-direction: column;
+  /* 内部要素の感覚を10pxに */
+  gap: 10px;
+  background-color: #333;
+  /* 電卓の内側に20pxの余白追加 */
+  padding: 20px;
+  /* 電卓の角を丸く */
+  border-radius: 8px;
+  width: 300px;
+  /* 画面幅の90%に収まるように 画面が小さくてもレイアウトが崩れない */
+  max-width: 90vw;
+}
+
+#display {
+  height: 60px;
+  font-size: 24px;
+  /* 数字を右寄せに */
+  text-align: right;
+  padding: 10px;
+  background-color: #222;
+  color: #fff;
+  /* 枠線なし */
+  border: none;
+  border-radius: 5px;
+  /* ディスプレイの下に余白を追加してボタンとの感覚を保つ */
+  margin-bottom: 10px;
+}
+
+.buttons {
+  /* cssのグリッドレイアウトを使用してボタンを配置 */
+  /* flexは直線的に1行ずつ並ぶが、gridは列と行を並べられる */
+  display: grid;
+  /* 4列構成にして各列の幅を均等(1fr)に */
+  /* frは比率での指定 */
+  /* repeat({繰り返す数}, {繰り返す数値}) */
+  grid-template-columns: repeat(4, 1fr);
+  /* ボタン同士の間隔設定 */
+  gap: 10px;
+}
+
+.button {
+  font-size: 24px;
+  background-color: #666;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  /* ホバー時にカーソルが指の形に */
+  cursor: pointer;
+  height: 60px;
+  /* ボタン内のテキストを中央に配置 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button:hover {
+  /* ホバー時にボタンの背景色が少し明るくなる */
+  background-color: #888;
+}
+
+#equals {
+  /* =の背景色をオレンジにしてわかりやすく */
+  background-color: #ff9500;
+  /* =ボタンを2行分に広げる */
+  grid-column: span 2; /* "="ボタンを2列分に拡大 */
+}

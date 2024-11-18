@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>電卓</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <div class="calculator">
+    <!-- readonlyでユーザーが直接入力できないようにしている -->
+    <input type="text" id="display" readonly>
+    <div class="buttons">
+        <button class="button" id="clear">AC</button>
+        <button class="button" id="zero">0</button>
+        <button class="button" id="double-zero">00</button>
+        <button class="button" id="dot">.</button>
+        <button class="button" id="one">1</button>
+        <button class="button" id="two">2</button>
+        <button class="button" id="three">3</button>
+        <button class="button" id="add">+</button>
+        <button class="button" id="four">4</button>
+        <button class="button" id="five">5</button>
+        <button class="button" id="six">6</button>
+        <button class="button" id="subtract">-</button>
+        <button class="button" id="seven">7</button>
+        <button class="button" id="eight">8</button>
+        <button class="button" id="nine">9</button>
+        <button class="button" id="multiply">×</button>
+        <button class="button" id="equals">=</button>
+        <button class="button" id="divide">÷</button>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
